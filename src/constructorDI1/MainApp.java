@@ -8,5 +8,6 @@ public class MainApp {
         ApplicationContext context = new ClassPathXmlApplicationContext("constructorDI1/Beans.xml");
         TextEditor textEditor = (TextEditor) context.getBean("textEditor");
         textEditor.spellCheck();
+        System.out.println(textEditor.getName());
     }
 }

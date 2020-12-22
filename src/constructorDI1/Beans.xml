@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-<bean id="textEditor" class="constructorDI1.TextEditor">
-    <constructor-arg ref="spellChecker"/>
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+<bean id="textEditor" class="constructorDI1.TextEditor" autowire="byType">
+    <property name="name" value="XIAO_LI_YANG"/>
 </bean>
+    <bean name="sellChecker" class="constructorDI1.SpellChecker"></bean>
 
-    <bean id="spellChecker" class="constructorDI1.SpellChecker"></bean>
 </beans>
